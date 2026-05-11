@@ -13,7 +13,9 @@ LABEL maintainer="Anirudh Nayak <a2nayak@ucsd.edu>"
 # 2) change to root to install packages
 USER root
 
-RUN apt-get -y install htop default-jdk
+RUN apt-get update
+
+RUN apt-get -y install htop openjdk-17-jdk
 
 # 3) install packages using notebook user
 #USER jovyan
